@@ -66,5 +66,30 @@ namespace FormControls
         {
 
         }
+
+        private void tbCity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBooks_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

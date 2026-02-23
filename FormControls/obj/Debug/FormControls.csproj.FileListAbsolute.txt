@@ -9,3 +9,4 @@ C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\YAZILIM\WindowsFormsSample
 C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\YAZILIM\WindowsFormsSamples\FormControls\obj\Debug\FormControls.exe
 C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\YAZILIM\WindowsFormsSamples\FormControls\obj\Debug\FormControls.pdb
 C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\YAZILIM\WindowsFormsSamples\FormControls\obj\Debug\FormControls.exe.config
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\YAZILIM\WindowsFormsSamples\FormControls\obj\Debug\FormControls.Form2.resources

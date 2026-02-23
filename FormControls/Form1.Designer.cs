@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblNameSurname = new System.Windows.Forms.Label();
             this.tbNameSurname = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -60,9 +61,14 @@
             this.lblLang = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblAvgPoint = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.imgPhoto = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.gbEducation.SuspendLayout();
             this.gbDivision.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNameSurname
@@ -126,6 +132,7 @@
             this.chkBooks.TabIndex = 6;
             this.chkBooks.Text = "Books";
             this.chkBooks.UseVisualStyleBackColor = true;
+            this.chkBooks.CheckedChanged += new System.EventHandler(this.chkBooks_CheckedChanged);
             // 
             // chkGaming
             // 
@@ -308,6 +315,7 @@
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(188, 20);
             this.tbCity.TabIndex = 1;
+            this.tbCity.TextChanged += new System.EventHandler(this.tbCity_TextChanged);
             // 
             // lblBirthDate
             // 
@@ -344,6 +352,7 @@
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(121, 21);
             this.cmbGender.TabIndex = 19;
+            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
             // 
             // lstLang
             // 
@@ -379,6 +388,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 22;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // lblAvgPoint
             // 
@@ -390,11 +400,27 @@
             this.lblAvgPoint.Text = "Avg Point";
             this.lblAvgPoint.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // imgPhoto
+            // 
+            this.imgPhoto.Image = ((System.Drawing.Image)(resources.GetObject("imgPhoto.Image")));
+            this.imgPhoto.Location = new System.Drawing.Point(536, 241);
+            this.imgPhoto.Name = "imgPhoto";
+            this.imgPhoto.Size = new System.Drawing.Size(210, 140);
+            this.imgPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPhoto.TabIndex = 24;
+            this.imgPhoto.TabStop = false;
+            this.imgPhoto.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.imgPhoto);
             this.Controls.Add(this.lblAvgPoint);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lblLang);
@@ -428,6 +454,7 @@
             this.gbDivision.ResumeLayout(false);
             this.gbDivision.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,6 +494,10 @@
         private System.Windows.Forms.Label lblLang;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblAvgPoint;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PictureBox imgPhoto;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
