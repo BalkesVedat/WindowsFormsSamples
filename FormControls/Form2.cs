@@ -47,5 +47,45 @@ namespace FormControls
             Form1 frm = new Form1();
             frm.ShowDialog();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tpPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tool1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subItemClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
