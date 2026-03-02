@@ -13,6 +13,13 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+        public double Number1 { get; set; }
+        public double Number2 { get; set; }
+        public string Oprt { get; set; }
+        public double Result { get; set; }
+        public bool IsResult { get; set; }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +30,131 @@ namespace Calculator
             if (txtResult.Text == "0")
                 txtResult.Text = "";
 
+            if (IsResult)
+            {
+                txtResult.Text = "";
+                IsResult = false;
+            }
+
             txtResult.Text += ((Button)sender).Text;
+        }
+
+        private void Operation(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string op = btn.Text;
+
+
+            if (op != "=")
+            {
+                Number1 = Convert.ToDouble(this.txtResult.Text);
+                Oprt = op;
+                txtMessage.Text = Number1.ToString() + " " + Oprt;
+                IsResult = true;
+            }
+            else
+            {
+                Number2 = Convert.ToDouble(this.txtResult.Text);
+                switch (Oprt)
+                {
+                    case "+":
+                        Result = Number1 + Number2;
+                        break;
+                    case "-":
+                        Result = Number1 - Number2;
+                        break;
+                    case "*":
+                        Result = Number1 * Number2;
+                        break;
+                    case "/":
+                        if (Number2 == 0)
+                        {
+                            Result = 0;
+                        }
+                        else
+                        {
+                            Result = Number1 / Number2;
+                        }
+                        break;
+                        //default:
+                        //    Result = Number1;
+                        //    break;
+                }
+
+                txtMessage.Text = "";
+
+                if (Number1 == 0)
+                    txtMessage.Text += "";
+                else
+                    txtMessage.Text += Number1.ToString();
+
+                txtMessage.Text += " " + Oprt;
+
+                if (Number2 == 0)
+                    txtMessage.Text += "";
+                else
+                    txtMessage.Text += Number2.ToString();
+
+                txtMessage.Text += "=";
+
+                if (Number1 == 0)
+                {
+                    txtResult.Text = Number2.ToString();
+                }
+                else
+                {
+                    txtResult.Text = Result.ToString();
+                }
+
+                IsResult = true;
+            }
+
+
+
+
+            //Button btn = (Button)sender;
+            //string op = btn.Text;
+
+            //if (op != "=")
+            //{
+            //    Number1 = Convert.ToDouble(txtResult.Text);
+            //    Oprt = op;
+            //    txtMessage.Text = Number1 + " " + Oprt;
+            //    IsResult = true;   
+            //}
+            //else
+            //{
+            //    Number2 = Convert.ToDouble(txtResult.Text);
+
+            //    switch (Oprt)
+            //    {
+            //        case "+":
+            //            Result = Number1 + Number2;
+            //            break;
+            //        case "-":
+            //            Result = Number1 - Number2;
+            //            break;
+            //        case "*":
+            //            Result = Number1 * Number2;
+            //            break;
+            //        case "/":
+            //            if (Number2 == 0)
+            //            {
+            //                Result = 0;
+            //                return;
+            //            }
+            //            Result = Number1 / Number2;
+            //            break;
+            //    }
+
+            //    txtMessage.Text = Number1 + " " + Oprt + " " + Number2 + " =";
+            //    txtResult.Text = Result.ToString();
+
+            //    IsResult = true;
+            //}
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -35,10 +166,10 @@ namespace Calculator
         {
             foreach (var item in this.Controls)
             {
-                if (item.GetType()==typeof(Button))
+                if (item.GetType() == typeof(Button))
                 {
                     Button btn = (Button)item;
-                    btn.BackColor = Color.Red;
+                    // btn.BackColor = Color.Red;
 
 
                 }
@@ -50,10 +181,6 @@ namespace Calculator
 
         }
 
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn0_Click(object sender, EventArgs e)
         {
@@ -109,7 +236,25 @@ namespace Calculator
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            Write(sender, e);
+            Operation(sender, e);
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            Operation(sender, e);
+        }
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            Operation(sender, e);
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            Operation(sender, e);
+        }
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            Operation(sender, e);
         }
     }
 }
