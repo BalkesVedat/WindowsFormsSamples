@@ -1,0 +1,11 @@
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\bin\Release\Calculator.exe.config
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\bin\Release\Calculator.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\bin\Release\Calculator.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.csproj.AssemblyReference.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.Form1.resources
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.Properties.Resources.resources
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.csproj.GenerateResource.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\Calculator\obj\Release\Calculator.exe.config
