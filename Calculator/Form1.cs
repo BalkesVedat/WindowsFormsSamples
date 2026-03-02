@@ -97,14 +97,11 @@ namespace Calculator
 
                 txtMessage.Text += "=";
 
+
                 if (Number1 == 0)
-                {
                     txtResult.Text = Number2.ToString();
-                }
                 else
-                {
                     txtResult.Text = Result.ToString();
-                }
 
                 IsResult = true;
             }
@@ -157,6 +154,19 @@ namespace Calculator
 
         }
 
+        private void BackSpace()
+        {
+            if (txtResult.Text.Length > 1)
+            {
+                string value = txtResult.Text.Substring(0, txtResult.Text.Length - 1);
+
+                txtResult.Text = value;
+            }
+            else
+            {
+                txtResult.Text = "0";
+            }
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -255,6 +265,58 @@ namespace Calculator
         private void btnMinus_Click(object sender, EventArgs e)
         {
             Operation(sender, e);
+        }
+
+        private void btnBackSpace_Click(object sender, EventArgs e)
+        {
+            BackSpace();
+        }
+
+        private void btnPlusMinus_Click(object sender, EventArgs e)
+        {
+            if (txtResult.Text.Substring(0, 1) == "-")
+            {
+                txtResult.Text = txtResult.Text.Substring(1, txtResult.Text.Length - 1);
+            }
+            else 
+            {
+                txtResult.Text = "-" + txtResult.Text;
+            }
+        }
+
+        private void btnComma_Click(object sender, EventArgs e)
+        {
+            //bool ok = false;
+
+            ////char[] values = new char[txtResult.Text.Length];
+
+            ////for (int i = 0; i < values.Length; i++)
+            ////{
+            ////    values[i] = txtResult.Text[i];
+            ////}
+
+            //for (int i = 0; i < txtResult.Text.Length; i++) 
+            //{
+            //    if (txtResult.Text[i] == '.')
+            //    {
+            //        ok = true;
+            //    }         
+            //}
+
+            //if (!ok)
+            //{
+            //    txtResult.Text = txtResult.Text + ".";
+            //}
+
+
+            if (!txtResult.Text.Contains(","))
+            {
+                txtResult.Text = txtResult.Text + ",";
+            }
+
+            
+
+
         }
     }
 }

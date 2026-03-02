@@ -60,10 +60,10 @@
             this.txtResult.ForeColor = System.Drawing.Color.LawnGreen;
             this.txtResult.Location = new System.Drawing.Point(10, 14);
             this.txtResult.Name = "txtResult";
-            this.txtResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtResult.Size = new System.Drawing.Size(266, 35);
             this.txtResult.TabIndex = 0;
             this.txtResult.Text = "0";
+            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtResult.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnBackSpace
@@ -77,6 +77,7 @@
             this.btnBackSpace.Tag = "";
             this.btnBackSpace.Text = "<--";
             this.btnBackSpace.UseVisualStyleBackColor = true;
+            this.btnBackSpace.Click += new System.EventHandler(this.btnBackSpace_Click);
             // 
             // btnCE
             // 
@@ -290,6 +291,7 @@
             this.btnComma.TabIndex = 19;
             this.btnComma.Text = ",";
             this.btnComma.UseVisualStyleBackColor = false;
+            this.btnComma.Click += new System.EventHandler(this.btnComma_Click);
             // 
             // btn0
             // 
@@ -315,6 +317,7 @@
             this.btnPlusMinus.TabIndex = 17;
             this.btnPlusMinus.Text = "+/-";
             this.btnPlusMinus.UseVisualStyleBackColor = false;
+            this.btnPlusMinus.Click += new System.EventHandler(this.btnPlusMinus_Click);
             // 
             // txtMessage
             // 
