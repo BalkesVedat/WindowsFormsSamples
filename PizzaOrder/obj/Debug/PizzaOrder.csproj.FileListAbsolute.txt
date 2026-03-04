@@ -1,0 +1,11 @@
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\bin\Debug\PizzaOrder.exe.config
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\bin\Debug\PizzaOrder.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\bin\Debug\PizzaOrder.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.csproj.AssemblyReference.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.frmSiparis.resources
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.Properties.Resources.resources
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.csproj.GenerateResource.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.csproj.CoreCompileInputs.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\PizzaOrder\obj\Debug\PizzaOrder.exe.config
