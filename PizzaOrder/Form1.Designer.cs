@@ -67,7 +67,7 @@
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.lblMusteriSec = new System.Windows.Forms.Label();
             this.cmbSelectCustomer = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbOrders = new System.Windows.Forms.ListBox();
             this.rbTable1 = new System.Windows.Forms.RadioButton();
             this.rbTable2 = new System.Windows.Forms.RadioButton();
             this.rbTable4 = new System.Windows.Forms.RadioButton();
@@ -75,11 +75,13 @@
             this.rbTable6 = new System.Windows.Forms.RadioButton();
             this.rbTable5 = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
+            this.grpTables = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.gbSize.SuspendLayout();
             this.pnlPizza.SuspendLayout();
             this.pnlMusteri.SuspendLayout();
             this.grpPaymentType.SuspendLayout();
+            this.grpTables.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,7 +93,7 @@
             this.müşteriİşlemleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(876, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(899, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,13 +124,13 @@
             // seçenekEkleToolStripMenuItem
             // 
             this.seçenekEkleToolStripMenuItem.Name = "seçenekEkleToolStripMenuItem";
-            this.seçenekEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seçenekEkleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.seçenekEkleToolStripMenuItem.Text = "Seçenek Ekle";
             // 
             // seçenekSilToolStripMenuItem
             // 
             this.seçenekSilToolStripMenuItem.Name = "seçenekSilToolStripMenuItem";
-            this.seçenekSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seçenekSilToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.seçenekSilToolStripMenuItem.Text = "Seçenek Sil";
             // 
             // malzemeİşlemleriToolStripMenuItem
@@ -229,6 +231,7 @@
             // 
             // cmbPizzaType
             // 
+            this.cmbPizzaType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPizzaType.FormattingEnabled = true;
             this.cmbPizzaType.Location = new System.Drawing.Point(83, 15);
             this.cmbPizzaType.Name = "cmbPizzaType";
@@ -291,6 +294,7 @@
             // 
             // cmbDrinks
             // 
+            this.cmbDrinks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDrinks.FormattingEnabled = true;
             this.cmbDrinks.Location = new System.Drawing.Point(83, 187);
             this.cmbDrinks.Name = "cmbDrinks";
@@ -442,14 +446,14 @@
             this.cmbSelectCustomer.TabIndex = 4;
             this.cmbSelectCustomer.SelectedIndexChanged += new System.EventHandler(this.cmbSelectCustomer_SelectedIndexChanged);
             // 
-            // listBox1
+            // lbOrders
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 282);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(876, 225);
-            this.listBox1.TabIndex = 8;
+            this.lbOrders.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbOrders.FormattingEnabled = true;
+            this.lbOrders.Location = new System.Drawing.Point(0, 282);
+            this.lbOrders.Name = "lbOrders";
+            this.lbOrders.Size = new System.Drawing.Size(899, 225);
+            this.lbOrders.TabIndex = 8;
             // 
             // rbTable1
             // 
@@ -462,7 +466,7 @@
             this.rbTable1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbTable1.ForeColor = System.Drawing.Color.Red;
-            this.rbTable1.Location = new System.Drawing.Point(684, 34);
+            this.rbTable1.Location = new System.Drawing.Point(13, 14);
             this.rbTable1.Margin = new System.Windows.Forms.Padding(25);
             this.rbTable1.MinimumSize = new System.Drawing.Size(0, 40);
             this.rbTable1.Name = "rbTable1";
@@ -483,7 +487,7 @@
             this.rbTable2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTable2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbTable2.ForeColor = System.Drawing.Color.Red;
-            this.rbTable2.Location = new System.Drawing.Point(776, 34);
+            this.rbTable2.Location = new System.Drawing.Point(105, 14);
             this.rbTable2.Margin = new System.Windows.Forms.Padding(25);
             this.rbTable2.MinimumSize = new System.Drawing.Size(0, 40);
             this.rbTable2.Name = "rbTable2";
@@ -504,7 +508,7 @@
             this.rbTable4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTable4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbTable4.ForeColor = System.Drawing.Color.Red;
-            this.rbTable4.Location = new System.Drawing.Point(776, 94);
+            this.rbTable4.Location = new System.Drawing.Point(105, 69);
             this.rbTable4.Margin = new System.Windows.Forms.Padding(25);
             this.rbTable4.MinimumSize = new System.Drawing.Size(0, 40);
             this.rbTable4.Name = "rbTable4";
@@ -525,7 +529,7 @@
             this.rrTable3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rrTable3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rrTable3.ForeColor = System.Drawing.Color.Red;
-            this.rrTable3.Location = new System.Drawing.Point(684, 94);
+            this.rrTable3.Location = new System.Drawing.Point(13, 69);
             this.rrTable3.Margin = new System.Windows.Forms.Padding(25);
             this.rrTable3.MinimumSize = new System.Drawing.Size(0, 40);
             this.rrTable3.Name = "rrTable3";
@@ -547,7 +551,7 @@
             this.rbTable6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTable6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbTable6.ForeColor = System.Drawing.Color.Red;
-            this.rbTable6.Location = new System.Drawing.Point(776, 154);
+            this.rbTable6.Location = new System.Drawing.Point(105, 127);
             this.rbTable6.Margin = new System.Windows.Forms.Padding(25);
             this.rbTable6.MinimumSize = new System.Drawing.Size(0, 40);
             this.rbTable6.Name = "rbTable6";
@@ -568,7 +572,7 @@
             this.rbTable5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTable5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbTable5.ForeColor = System.Drawing.Color.Red;
-            this.rbTable5.Location = new System.Drawing.Point(684, 154);
+            this.rbTable5.Location = new System.Drawing.Point(13, 127);
             this.rbTable5.Margin = new System.Windows.Forms.Padding(25);
             this.rbTable5.MinimumSize = new System.Drawing.Size(0, 40);
             this.rbTable5.Name = "rbTable5";
@@ -583,7 +587,7 @@
             this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(686, 207);
+            this.btnSave.Location = new System.Drawing.Point(693, 204);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(175, 47);
             this.btnSave.TabIndex = 15;
@@ -591,20 +595,29 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // grpTables
+            // 
+            this.grpTables.Controls.Add(this.rbTable1);
+            this.grpTables.Controls.Add(this.rbTable2);
+            this.grpTables.Controls.Add(this.rbTable6);
+            this.grpTables.Controls.Add(this.rrTable3);
+            this.grpTables.Controls.Add(this.rbTable5);
+            this.grpTables.Controls.Add(this.rbTable4);
+            this.grpTables.Location = new System.Drawing.Point(677, 27);
+            this.grpTables.Name = "grpTables";
+            this.grpTables.Size = new System.Drawing.Size(205, 171);
+            this.grpTables.TabIndex = 16;
+            this.grpTables.TabStop = false;
+            // 
             // frmSiparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(876, 507);
+            this.ClientSize = new System.Drawing.Size(899, 507);
+            this.Controls.Add(this.grpTables);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.rbTable6);
-            this.Controls.Add(this.rbTable5);
-            this.Controls.Add(this.rbTable4);
-            this.Controls.Add(this.rrTable3);
-            this.Controls.Add(this.rbTable2);
-            this.Controls.Add(this.rbTable1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbOrders);
             this.Controls.Add(this.pnlMusteri);
             this.Controls.Add(this.pnlPizza);
             this.Controls.Add(this.menuStrip1);
@@ -622,6 +635,8 @@
             this.pnlMusteri.PerformLayout();
             this.grpPaymentType.ResumeLayout(false);
             this.grpPaymentType.PerformLayout();
+            this.grpTables.ResumeLayout(false);
+            this.grpTables.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,7 +682,7 @@
         private System.Windows.Forms.RadioButton rbFoodCard;
         private System.Windows.Forms.Label lblDrink;
         private System.Windows.Forms.ComboBox cmbDrinks;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbOrders;
         private System.Windows.Forms.RadioButton rbTable1;
         private System.Windows.Forms.RadioButton rbTable2;
         private System.Windows.Forms.RadioButton rbTable4;
@@ -675,6 +690,7 @@
         private System.Windows.Forms.RadioButton rbTable6;
         private System.Windows.Forms.RadioButton rbTable5;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox grpTables;
     }
 }
 

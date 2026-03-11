@@ -8,6 +8,8 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.CheckedListBox;
+
 
 namespace PizzaOrder
 {
@@ -103,7 +105,7 @@ namespace PizzaOrder
             }
 
             foreach (string item in drinkList)
-            { 
+            {
                 cmbDrinks.Items.Add(item);
             }
 
@@ -116,7 +118,7 @@ namespace PizzaOrder
                 chkListExtras.Items.Add(item);
             }
 
-            chkListExtras.MultiColumn=true;
+            chkListExtras.MultiColumn = true;
             chkListExtras.ColumnWidth = 75;
 
 
@@ -182,13 +184,23 @@ namespace PizzaOrder
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            double basePrice = 150;
+            double totalPrice = 0;
+            double sizePrice = 0;
+            double extraPrice = 0;
+            double extraUnitPrice = 20;
+            double drinkPrice = 0;
+            double drinkAdd = 30;
+
+            //1 - Pizza Tipi seçimi
             string pizzaType = cmbPizzaType.Text;
 
-            string pizzaSize="";
+            string pizzaSize = "";
 
+            //2 - Pizza Boyutu Seçimi
             foreach (var item in gbSize.Controls)
             {
-                if (item.GetType()==typeof(RadioButton))
+                if (item.GetType() == typeof(RadioButton))
                 {
                     RadioButton rb = (RadioButton)item;
                     bool isChecked = rb.Checked;
@@ -197,10 +209,114 @@ namespace PizzaOrder
                         pizzaSize = rb.Text;
                     }
                 }
-
             }
 
-           // MessageBox.Show(pizzaSize.ToString());
+            switch (pizzaSize)
+            {
+                case "Küçük":
+                    sizePrice = 0;
+                    break;
+                case "Orta":
+                    sizePrice = 20;
+                    break;
+                case "Büyük":
+                    sizePrice = 30;
+                    break;
+                default:
+                    break;
+            }
+
+
+            //3 - Extra malzeme seçimi
+
+            CheckedItemCollection list = chkListExtras.CheckedItems;
+
+            int numberOfExtras = list.Count;
+
+            extraPrice = extraUnitPrice * numberOfExtras;
+
+            //4 - İçecek Seçimi
+
+            string drink = cmbDrinks.Text;
+            bool isDrinkSelected = false;
+
+            if (drink != "İstemiyorum")
+            {
+                isDrinkSelected = true;
+                drinkPrice = drinkAdd;
+            }
+            else
+            {
+                isDrinkSelected = false;
+                drinkPrice = 0;
+            }
+
+
+                //5 - Ödeme Tipi Seçimi
+                string paymentType = "";
+
+            foreach (Control item in grpPaymentType.Controls)
+            {
+                if (item.GetType() == typeof(RadioButton))
+                {
+                    RadioButton rb = (RadioButton)item;
+
+                    if (rb.Checked)
+                    {
+                        paymentType = rb.Text;
+                    }
+                }
+            }
+
+            // 6 - Masa Seçimi 
+
+            string selectedTable = "";
+
+            foreach (Control item in grpTables.Controls)
+            {
+                if (item.GetType() == typeof(RadioButton))
+                {
+                    RadioButton rb = (RadioButton)item;
+
+                    if (rb.Checked)
+                    {
+                        selectedTable = rb.Text;
+                    }
+                }
+            }
+
+            if (selectedTable.Length == 0)
+            {
+                MessageBox.Show("Masa Seçilmemiş, Önce masa seçmelisiniz.");
+                return;
+            }
+
+            totalPrice = basePrice + sizePrice + extraPrice + drinkPrice;
+
+            string orderDetail = "";
+
+            string strExtra = "";
+
+            foreach (string item in list)
+            {
+                strExtra += item.ToString() + "/";
+            }
+
+            orderDetail += pizzaType + " - ";
+            orderDetail += pizzaSize + " - ";
+            orderDetail += strExtra + " - ";
+            orderDetail += drink + " - ";
+            orderDetail += paymentType + " - ";
+            orderDetail += selectedTable + " - ";
+            orderDetail += totalPrice + " - ";
+            orderDetail += txtCustomerName.Text ;
+
+            lbOrders.Items.Add(orderDetail);
+
+            MessageBox.Show("Sipariş Kaydedildi.");
+            //TODO:Formu temizleyen kodu yazın.
+
+            // MessageBox.Show(pizzaSize.ToString());
 
         }
     }
