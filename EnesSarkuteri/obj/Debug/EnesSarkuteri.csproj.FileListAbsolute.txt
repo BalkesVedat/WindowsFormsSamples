@@ -1,0 +1,11 @@
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\bin\Debug\EnesSarkuteri.exe.config
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\bin\Debug\EnesSarkuteri.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\bin\Debug\EnesSarkuteri.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.csproj.AssemblyReference.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.Properties.Resources.resources
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.csproj.GenerateResource.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.csproj.CoreCompileInputs.cache
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.exe
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.pdb
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.exe.config
+C:\Users\ARIBILGI\Desktop\ÖĞRETMEN YEDEK\VEDAT HOCA\Pazartesi_Çarşamba_Cuma\KODLAR\WindowsFormsSamples\EnesSarkuteri\obj\Debug\EnesSarkuteri.frmCustomer.resources

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NorthwindCountryDataSet" targetNamespace="http://tempuri.org/NorthwindCountryDataSet.xsd" xmlns:mstns="http://tempuri.org/NorthwindCountryDataSet.xsd" xmlns="http://tempuri.org/NorthwindCountryDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="NorthwindConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="NorthwindConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EnesSarkuteri.Properties.Settings.GlobalReference.Default.NorthwindConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetCountryListTableAdapter" GeneratorDataComponentClassName="GetCountryListTableAdapter" Name="GetCountryList" UserDataComponentName="GetCountryListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NorthwindConnectionString (Settings)" DbObjectName="Northwind.dbo.GetCountryList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Country FROM dbo.GetCountryList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NorthwindCountryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="NorthwindCountryDataSet" msprop:Generator_DataSetName="NorthwindCountryDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetCountryList" msprop:Generator_RowEvHandlerName="GetCountryListRowChangeEventHandler" msprop:Generator_RowDeletedName="GetCountryListRowDeleted" msprop:Generator_RowDeletingName="GetCountryListRowDeleting" msprop:Generator_RowEvArgName="GetCountryListRowChangeEvent" msprop:Generator_TablePropName="GetCountryList" msprop:Generator_RowChangedName="GetCountryListRowChanged" msprop:Generator_RowChangingName="GetCountryListRowChanging" msprop:Generator_TableClassName="GetCountryListDataTable" msprop:Generator_RowClassName="GetCountryListRow" msprop:Generator_TableVarName="tableGetCountryList" msprop:Generator_UserTableName="GetCountryList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_UserColumnName="Country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaOrder", "PizzaOrder\PizzaOrder.csproj", "{7E5DE08E-B70B-4BF0-98A6-5182400CBEB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnesSarkuteri", "EnesSarkuteri\EnesSarkuteri.csproj", "{D8BF2A15-1AF4-4A67-8179-EDD0E7065B09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7E5DE08E-B70B-4BF0-98A6-5182400CBEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5DE08E-B70B-4BF0-98A6-5182400CBEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5DE08E-B70B-4BF0-98A6-5182400CBEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BF2A15-1AF4-4A67-8179-EDD0E7065B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BF2A15-1AF4-4A67-8179-EDD0E7065B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BF2A15-1AF4-4A67-8179-EDD0E7065B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BF2A15-1AF4-4A67-8179-EDD0E7065B09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
