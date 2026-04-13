@@ -49,32 +49,92 @@ namespace EnesSarkuteri
 
         private void MusteriListesiniYukle()
         {
-           // cmd.CommandText = "Select * FROM Customers";
+            // cmd.CommandText = "Select * FROM Customers";
             cmd.CommandText = "SP_GetCustomerList";
             cmd.Connection = conn;
+            cmd.Parameters.Clear();
             cmd.CommandType = CommandType.StoredProcedure;
 
             adapter = new SqlDataAdapter(cmd);
 
-
+            dt.Clear();
             adapter.Fill(dt);
 
             dataGridCustomer.DataSource = dt;
         }
 
+        private string ClearContent(string text)
+        {
+            if (text == string.Empty)
+            {
+                return "";
+            }
+
+            text = text.Trim();
+            text = text.ToUpper();
+            text = text.Replace("\r", "");
+            text = text.Replace("\n", "");
+            text = text.Replace("\r\n", "");
+            text = text.Replace("'", "");
+            text = text.Replace("\t", "");
+            text = text.Replace("DROP", "DROP_");
+            text = text.Replace("EXECUTE", "EXECUTE_");
+            text = text.Replace("SELECT", "SELECT_");
+            text = text.Replace("=", "");
+            text = text.Replace("INSERT", "INSERT_");
+            text = text.Replace("UPDATE", "UPDATE_");
+            text = text.Replace("CREATE", "CREATE_");
+            text = text.Replace("ALTER", "ALTER_");
+            text = text.Replace("GRANT", "GRANT_");
+            text = text.Replace("DENY", "DENY_");
+            text = text.Replace("\"", "");
+            text = text.Replace(",", "");
+
+            return text;
+        }
+
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Customers VALUES ('XYZ','XYZ Restoran','Ayşe Hanım', NULL, 'Bakırköy', 'İstanbul', NULL, NULL, 'Türkiye', '55555555', NULL)";
+                if (txtCustomerID.Text == "" || txtCompany.Text == "")
+                {
+                    MessageBox.Show("Zorunlu alanlar boş geçilemez.");
+                    return;
+                }
 
+                string CustomerID = ClearContent(txtCustomerID.Text);
+                string CompanyName = ClearContent(txtCompany.Text);
+                string ContactPerson = ClearContent(txtContact.Text);
+                string Address = ClearContent(txtAddress.Text);
+                string Country = ClearContent(cmbCountry.SelectedText);
+                string Phone = ClearContent(txtPhone.Text);
+
+
+                cmd.CommandText = "INSERT INTO Customers VALUES (@CustomerID, @CompanyName, @ContactPerson, NULL, @Address, NULL, NULL, NULL, @Country, @Phone, NULL)";
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
+                cmd.Parameters.AddWithValue("@CompanyName", CompanyName);
+                cmd.Parameters.AddWithValue("@ContactPerson", ContactPerson);
+                cmd.Parameters.AddWithValue("@Address", Address);
+                cmd.Parameters.AddWithValue("@Country", Country);
+                cmd.Parameters.AddWithValue("@Phone", Phone);
                 cmd.Connection = conn;
 
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
 
                 int adet = cmd.ExecuteNonQuery();
 
-                conn.Close();
+                if (conn.State != ConnectionState.Closed)
+                {
+                    conn.Close();
+                }
 
                 if (adet > 0)
                 {
@@ -90,7 +150,7 @@ namespace EnesSarkuteri
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bir sorun oluştu."+ ex.Message);
+                MessageBox.Show("Bir sorun oluştu." + ex.Message);
             }
 
         }
@@ -102,6 +162,33 @@ namespace EnesSarkuteri
 
         private void bindingSource1_CurrentChanged_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridCustomer.Rows[e.RowIndex];
+
+            selectedRow.Selected = true;
+           // dataGridCustomer.Rows[e.RowIndex].Selected = true;
+
+            txtCustomerID.Text = selectedRow.Cells["CustomerID"].Value.ToString();
+            txtCompany.Text = selectedRow.Cells["CompanyName"].Value.ToString();
+            txtContact.Text = selectedRow.Cells["ContactName"].Value.ToString();
+            txtAddress.Text = selectedRow.Cells["Address"].Value.ToString();
+            cmbCountry.Text = selectedRow.Cells["Country"].Value.ToString();
+            txtPhone.Text = selectedRow.Cells["Phone"].Value.ToString();
+
 
         }
     }

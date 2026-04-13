@@ -43,20 +43,20 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblCountry = new System.Windows.Forms.Label();
             this.cmbCountry = new System.Windows.Forms.ComboBox();
-            this.northwindDataSet = new EnesSarkuteri.NorthwindDataSet();
-            this.northwindDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.northwindCountryDataSet = new EnesSarkuteri.NorthwindCountryDataSet();
+            this.northwindDataSet = new EnesSarkuteri.NorthwindDataSet();
+            this.northwindDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getCountryListTableAdapter = new EnesSarkuteri.NorthwindCountryDataSetTableAdapters.GetCountryListTableAdapter();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindCountryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridCustomer
@@ -66,6 +66,7 @@
             this.dataGridCustomer.Name = "dataGridCustomer";
             this.dataGridCustomer.Size = new System.Drawing.Size(881, 241);
             this.dataGridCustomer.TabIndex = 0;
+            this.dataGridCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCustomer_CellClick);
             this.dataGridCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnInsert
@@ -191,16 +192,6 @@
             this.cmbCountry.TabIndex = 13;
             this.cmbCountry.ValueMember = "Country";
             // 
-            // northwindDataSet
-            // 
-            this.northwindDataSet.DataSetName = "NorthwindDataSet";
-            this.northwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // northwindDataSetBindingSource
-            // 
-            this.northwindDataSetBindingSource.DataSource = this.northwindDataSet;
-            this.northwindDataSetBindingSource.Position = 0;
-            // 
             // bindingSource1
             // 
             this.bindingSource1.DataMember = "GetCountryList";
@@ -211,6 +202,16 @@
             // 
             this.northwindCountryDataSet.DataSetName = "NorthwindCountryDataSet";
             this.northwindCountryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // northwindDataSet
+            // 
+            this.northwindDataSet.DataSetName = "NorthwindDataSet";
+            this.northwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // northwindDataSetBindingSource
+            // 
+            this.northwindDataSetBindingSource.DataSource = this.northwindDataSet;
+            this.northwindDataSetBindingSource.Position = 0;
             // 
             // getCountryListTableAdapter
             // 
@@ -243,6 +244,7 @@
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -253,12 +255,13 @@
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 450);
+            this.ClientSize = new System.Drawing.Size(927, 450);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtPhone);
@@ -282,10 +285,10 @@
             this.Text = "Müşteri İşlemleri";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindCountryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
